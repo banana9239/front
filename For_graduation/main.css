@@ -1,0 +1,108 @@
+body {
+    background-color:#FCFFF5;
+}
+#container {
+    position:relative;
+    margin-top:10px;
+
+}
+#nav {
+    position:absolute;
+    top:0%;
+    right:0%;
+    padding-top:0px;
+
+}
+ul {
+    margin-top:10px;
+    
+}
+ul li {
+    text-align: center;
+    display:block;
+    float:left;
+    list-style-type: none;
+    outline: 2px solid #193441;
+    margin-right:20px;
+    background-color:#3E606F;
+    padding:5px;
+}
+a {
+    text-decoration: none;
+    color:white;
+    cursor:pointer;
+}
+
+#logo {
+    position:absolute;
+    top:0;
+    left:11px;
+    margin-right:30px;
+    width:300px;
+}
+#content {
+    margin:10px auto;
+    max-width: 85%;
+    padding-top:80px;
+}
+#text_box {
+    text-align:center;
+}
+#texts {
+    @import url('https://fonts.googleapis.com/css2?family=Dokdo&family=Nanum+Brush+Script&family=Rampart+One&display=swap');
+    font-family: 'Dokdo', cursive;
+    font-family: 'Nanum Brush Script', cursive;
+}
+#footer {
+    margin-top:10px;
+    text-align: center;
+    padding:10px;
+    font: 12px Verdana, sans-serif;
+}       
+
+table {
+    text-align: center;
+    box-sizing: border-box;
+    text-indent:initial;
+    border-spacing: 2px;
+    border-collapse: collapse;
+    border:1px solid black;
+    width:100%;
+}
+th, td {
+    border:1px solid gray;
+}
+#major {
+    color:rgb(59, 51, 51);
+}
+#title {
+    color:black;
+    font-size:30px;
+}
+#explain {
+    color:gray;
+    font-size: 12px;
+    text-align: right;
+}
+
+#require {
+    color:black;
+    border:none;
+    font-size:8px;
+}
+.black {
+    color:black;
+}
+.gray{
+    color:gray;
+}
+#sub_tr {
+    height:auto;
+}
+#date {
+    color:gray;
+    font-size:8px;
+}
+#notice {
+    color:rgb(13, 55, 102);
+}
