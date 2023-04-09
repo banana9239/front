@@ -6,22 +6,23 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>1.html</title>
     <style>
-        div {
-            opacity: 0.3;
-        }
+        
         iframe {
             display: flex;
             justify-content: center;
             align-items: center;
             margin: 0 auto;
         }
+        .box::before {
+            opacity: 0.5;
+        }
 
     </style>
 </head>
-<body>
-    <div style="background-color: black;" width="100%"><p style="color:white; text-align: center;">YouTube</p></div>
-    <div>
-        <iframe width="500" height="500" src="https://www.youtube.com/embed/HZIcTZABMuc" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
-    </div>
+<body class="box">
+    <section style="background-color: black; border: 1px solid #F2E205; height: 100%; height: auto">
+        
+    </section>
+    
 </body>
 </html>
