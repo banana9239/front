@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script>
+        function shuffle(arr) {
+            arr.sort(() => Math.random() - 0.5);
+        }
+
+        function is_valid(board, row, col, num){
+            for (let i=0;i<9;i++){
+                if (board[row][i]==num) return false;
+                if (board[i][col]==num) return false;
+                if (board[3*(Math.floor(row/3))+Math.floor(i/3)][3*(Math.floor(col/3))+i%3]==num) return false;
+            }
+            return true;
+        }
+
+        let board = [];
+
+        function Board(){
+            alert();            
+            for (let i=0;i<9;i++){
+                board[i]=[];
+                for(let j=0;j<9;j++){
+                    board[i][j]=0;
+                    
+                }
+            }
+            let board_str = ''
+            for(let temp of board){
+                board_str += temp+"<br>";
+            }
+            demo.innerHTML = board_str;
+        }   
+
+        function fill_board(board) {
+            let numbers = [1,2,3,4,5,6,7,8,9];
+            shuffle(numbers);
+            for(let i=0;i<9;i++){
+                for(let j=0;j<9;j++){
+                    
+                    if (board[i][j]==0){
+                        shuffle(numbers);
+                        for(let num of numbers){
+                            if(is_valid(board,i,j,num)){
+                                board[i][j]= num;
+                                if (fill_board(board)) return true;
+                                board[i][j]=0;
+                            }
+                        }
+                        return false;
+                    }
+                }
+            }
+            let board_str = ''
+            for(let temp of board){
+                board_str += temp+"<br>";
+            }
+            demo.innerHTML = board_str;
+            return true;
+        }
+    </script>
+</head>
+<body>
+    <button type="button" onclick="Board()">보드생성</button>
+    <button type="button" onclick="fill_board(board)">보드채우기</button>
+    <div id="demo"></div>
+</body>
+</html>
